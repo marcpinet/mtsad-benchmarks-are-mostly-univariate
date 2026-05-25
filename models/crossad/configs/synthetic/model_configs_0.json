@@ -1,0 +1,27 @@
+{
+  "seq_len": 96,
+  "patch_len": 8,
+  "d_model": 16,
+  "n_heads": 4,
+  "d_ff": 128,
+  "e_layers": 2,
+  "d_layers": 1,
+  "m_layers": 1,
+  "ms_kernels": [
+    4,
+    2
+  ],
+  "n_vars": 9,
+  "ms_method": "interval_sampling",
+  "norm": "batchnorm",
+  "attn_dropout": 0.1,
+  "proj_dropout": 0.1,
+  "ff_dropout": 0.1,
+  "activation": "gelu",
+  "n_query": 16,
+  "query_len": 4,
+  "topk": 5,
+  "bank_size": 32,
+  "decay": 0.99,
+  "epsilon": 1e-05
+}

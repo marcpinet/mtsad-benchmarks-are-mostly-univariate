@@ -1,0 +1,8 @@
+{
+  "batch_size": 64,
+  "learning_rate": 0.001,
+  "optim": "adam",
+  "lradj": "type1",
+  "train_epochs": 10,
+  "patience": 3
+}
