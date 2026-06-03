@@ -31,8 +31,6 @@ Note that these models also exist under `notebooks/models/` as notebooks, with m
 
 Generates a synthetic multivariate signal with injected cross-channel correlation anomalies using our formula, fits the CATCH model and prints AUC-ROC, AUC-PR and the VUS metrics.
 
-Due to the excessive number of parameters in CATCH when increasing the latent_dim and/or the window_size, we made different configurations a RTX 4090 24 GB can handle.
-
 ### CrossAD
 
 Two variants are available: channel-dependent (`Basic_CrossAD_CD`) and channel-independent (`Basic_CrossAD`):
@@ -70,13 +68,23 @@ jupyter lab notebooks/
 Place datasets under `datasets/<dataset_name_lowercase>/`
 
 - Get GECCO [here](https://zenodo.org/records/3884398) (`datasets/gecco/1_gecco2018_water_quality.csv`)
-- Get SWAN [here](https://drive.google.com/file/d/1YU_d9kIaP2EubyUhGWOwSKAhJxNntB8W/view?usp=sharing) (`datasets/swan/SWAN.csv`)
-- Get SWAT [here](https://drive.google.com/file/d/1YU_d9kIaP2EubyUhGWOwSKAhJxNntB8W/view?usp=sharing) (`datasets/swat/SWAT.csv`) (same source as SWAN)
+- Get SWAN and SWaT [here](https://github.com/decisionintelligence/CrossAD) (`datasets/swan/SWAN.csv` and `datasets/swat/SWaT.csv`)
 
 The others are directly retrieved from kaggle.
 
-## Notes for reviewers
+## Notes
 
 - GPU is auto-detected (CUDA / Apple MPS / CPU) in the runners
 - Code was written in Python 3.12
 - Notebooks are available in `notebooks/`, already fully run and with the results for you to check.
+
+## Citation
+
+```bibtex
+@article{Pinet2026AnomaliesIM,
+  title={Anomalies in Multivariate Time Series Benchmarks Are Mostly Univariate},
+  author={Marc Pinet and Julien Cumin and Samuel Berlemont and Dominique Vaufreydaz},
+  year={2026},
+  url={https://doi.org/10.48550/arXiv.2606.02670}
+}
+```
